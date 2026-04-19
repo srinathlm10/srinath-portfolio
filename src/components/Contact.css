@@ -1,0 +1,59 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-pretitle {
+  font-family: monospace;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-title {
+  margin-bottom: 1.5rem;
+}
+
+.contact-description {
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+}
+
+.contact-btn {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+}
+
+.social-links a:hover {
+  color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.footer-text {
+  font-family: monospace;
+  font-size: 0.85rem;
+  text-align: center;
+}
