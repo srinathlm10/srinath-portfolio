@@ -97,6 +97,8 @@
     gap: 2rem;
     transition: right var(--transition-normal);
     padding: 2rem;
+    background: var(--color-surface);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.open {

@@ -2,21 +2,6 @@
   /* Typography */
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   
-  /* Light Theme Colors */
-  --color-bg: #f8fafc;
-  --color-surface: #ffffff;
-  --color-text: #0f172a;
-  --color-text-muted: #64748b;
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
-  --color-accent: #8b5cf6;
-  --color-border: #e2e8f0;
-  
-  /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.5);
-  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-
   /* Spacing & Layout */
   --max-width: 1200px;
   --nav-height: 80px;
@@ -27,41 +12,47 @@
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Dark Theme Colors */
-    --color-bg: #030712;
-    --color-surface: #111827;
-    --color-text: #f9fafb;
-    --color-text-muted: #9ca3af;
-    --color-primary: #3b82f6;
-    --color-primary-hover: #60a5fa;
-    --color-accent: #8b5cf6;
-    --color-border: #1f2937;
-    
-    /* Glassmorphism Dark */
-    --glass-bg: rgba(17, 24, 39, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.05);
-    --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  }
+/* --- LIGHT MODE --- */
+[data-mode="light"] {
+  --color-bg: #f0f4f8; /* Soft Ice Blue / Slate */
+  --color-surface: #ffffff;
+  --color-text: #102a43; /* Deep Blue-Gray */
+  --color-text-muted: #334e68;
+  --color-border: #d9e2ec;
+  --color-primary: #1864ab; /* Ocean Blue */
+  --color-primary-hover: #1971c2;
+  --color-accent: #0ea5e9; /* Sky Blue */
+  --color-btn-text: #ffffff;
+  
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 4px 30px rgba(16, 42, 67, 0.05);
 }
 
-/* Force dark theme if user wants it by default - For this premium look, dark mode is default */
-body {
-  /* Dark Theme Colors */
-  --color-bg: #030712;
-  --color-surface: #111827;
-  --color-text: #f9fafb;
-  --color-text-muted: #9ca3af;
-  --color-primary: #60a5fa;
-  --color-primary-hover: #93c5fd;
-  --color-accent: #a78bfa;
-  --color-border: #1f2937;
+/* --- DARK MODE --- */
+[data-mode="dark"] {
+  --color-bg: #0b1426; /* Deep Navy */
+  --color-surface: #16253e;
+  --color-text: #f0f4f8;
+  --color-text-muted: #9fb3c8;
+  --color-border: #243b53;
+  --color-primary: #3b82f6; /* Bright Blue */
+  --color-primary-hover: #60a5fa;
+  --color-accent: #38bdf8; /* Light Sky Blue */
+  --color-btn-text: #000000;
   
-  /* Glassmorphism Dark */
-  --glass-bg: rgba(17, 24, 39, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glass-bg: rgba(22, 37, 62, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 * {
@@ -183,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: #000;
+  color: var(--color-btn-text);
   box-shadow: 0 4px 14px 0 rgba(96, 165, 250, 0.39);
 }
 
@@ -191,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-primary-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(96, 165, 250, 0.23);
-  color: #000;
+  color: var(--color-btn-text);
 }
 
 .btn-outline {

@@ -36,7 +36,7 @@ const Contact = () => {
         </div>
 
         <a href="mailto:srinathguna12@gmail.com" className="btn btn-primary contact-btn animate-fade-in delay-300">
-          Say Hello
+          Say Hello!
         </a>
       </div>
       
