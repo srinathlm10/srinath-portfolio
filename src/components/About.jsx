@@ -51,15 +51,19 @@ const About = () => {
           {/* Avatar */}
           <div className="lg:col-span-2 flex justify-center order-1 lg:order-2 mb-8 lg:mb-0">
             <div className="relative w-64 h-64 lg:w-72 lg:h-72">
-              <div className="absolute inset-0 rounded-2xl opacity-30 blur-2xl"
+              <div className="absolute inset-0 rounded-full opacity-30 blur-2xl"
                 style={{ background: 'linear-gradient(135deg, #3b82f6, #0ea5e9)' }} />
-              <div className="card-surface relative w-full h-full rounded-2xl border flex items-center justify-center
-                              transition-all duration-300 hover:scale-105">
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24"
-                  fill="none" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                  <circle cx="12" cy="7" r="4" />
-                </svg>
+              <div className="card-surface relative w-full h-full rounded-full border-2 theme-border flex items-center justify-center
+                              transition-all duration-300 hover:scale-105 overflow-hidden shadow-2xl">
+                <img 
+                  src="/images/srinath_profile.png" 
+                  alt="Gajji Srinath" 
+                  className="w-full h-full object-cover transition-transform duration-500"
+                  style={{ 
+                    objectPosition: '50% 15%',
+                    transform: 'scale(1.05)'
+                  }}
+                />
               </div>
             </div>
           </div>
