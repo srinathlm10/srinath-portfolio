@@ -20,7 +20,7 @@ const Research = () => {
           {publications.map((pub, index) => (
             <div 
               key={index} 
-              className={`research-card glass-panel animate-fade-in delay-${(index + 1) * 100}`}
+              className={`research-card glass-panel hover-glow animate-fade-in delay-${(index + 1) * 100}`}
             >
               <div className="research-header">
                 <div className="research-icon">

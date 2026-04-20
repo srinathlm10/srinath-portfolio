@@ -40,7 +40,7 @@ const Experience = () => {
       <div className="container">
         <h2 className="heading-lg section-title animate-fade-in">Where I've Worked</h2>
         
-        <div className="experience-container glass-panel animate-fade-in delay-100">
+        <div className="experience-container glass-panel hover-glow animate-fade-in delay-100">
           <div className="tab-list" role="tablist">
             {jobs.map((job, index) => (
               <button

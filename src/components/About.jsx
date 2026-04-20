@@ -1,6 +1,9 @@
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import './About.css';
 
 const About = () => {
+  const revealRef = useScrollReveal();
+
   const skills = [
     'Financial Modeling',
     'Data Analysis & Visualization',
@@ -15,9 +18,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section">
+    <section id="about" className="section reveal" ref={revealRef}>
       <div className="container">
-        <h2 className="heading-lg section-title animate-fade-in">About Me</h2>
+        <h2 className="heading-lg section-title">About Me</h2>
         
         <div className="about-content">
           <div className="about-text glass-panel animate-fade-in delay-100">

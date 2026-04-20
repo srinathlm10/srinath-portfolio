@@ -53,7 +53,7 @@ const Certifications = () => {
           {certifications.map((cert, index) => (
             <div 
               key={index} 
-              className={`cert-card glass-panel animate-fade-in delay-${(index % 4 + 1) * 100}`}
+              className={`cert-card glass-panel hover-glow animate-fade-in delay-${(index % 4 + 1) * 100}`}
             >
               <div className="cert-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="30" height="30">

@@ -1,13 +1,26 @@
+import { useTypewriter } from '../hooks/useTypewriter';
 import './Hero.css';
 
 const Hero = () => {
+  const roles = [
+    "Data Analyst",
+    "Finance Enthusiast",
+    "Management Professional",
+    "Urban Planner"
+  ];
+  
+  const typedText = useTypewriter(roles, 100, 50, 2000);
+
   return (
     <section id="home" className="hero section">
       <div className="container hero-container">
         <div className="hero-content animate-fade-in">
           <p className="hero-greeting text-gradient">Hi, my name is</p>
           <h1 className="heading-xl hero-title">Gajji Srinath</h1>
-          <h2 className="heading-lg hero-subtitle text-muted">Data Analyst & Urban Planner.</h2>
+          <h2 className="heading-lg hero-subtitle text-muted">
+            {typedText}
+            <span className="cursor">|</span>
+          </h2>
           <p className="hero-description text-muted">
             Highly organized and detail-oriented professional with a strong academic background 
             and practical experience in data analysis, research, and project coordination. Adept at 

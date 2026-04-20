@@ -34,7 +34,7 @@ const Education = () => {
           {education.map((item, index) => (
             <div 
               key={index} 
-              className={`edu-card glass-panel animate-fade-in delay-${(index + 1) * 100}`}
+              className={`edu-card glass-panel hover-glow animate-fade-in delay-${(index + 1) * 100}`}
             >
               <div className="edu-icon-wrapper">
                 {item.logo ? (

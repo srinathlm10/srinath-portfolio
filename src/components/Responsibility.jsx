@@ -28,7 +28,7 @@ const Responsibility = () => {
               className={`timeline-item animate-fade-in delay-${(index + 1) * 100}`}
             >
               <div className="timeline-dot"></div>
-              <div className="timeline-content glass-panel">
+              <div className="timeline-content glass-panel hover-glow">
                 <div className="resp-header">
                   <h3 className="resp-title">{role.title}</h3>
                   <div className="resp-date text-muted">{role.date}</div>

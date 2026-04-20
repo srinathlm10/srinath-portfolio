@@ -23,6 +23,7 @@
   --color-primary-hover: #1971c2;
   --color-accent: #0ea5e9; /* Sky Blue */
   --color-btn-text: #ffffff;
+  --glow-shadow: 0 10px 40px -10px rgba(24, 100, 171, 0.5);
   
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(255, 255, 255, 0.5);
@@ -40,6 +41,7 @@
   --color-primary-hover: #60a5fa;
   --color-accent: #38bdf8; /* Light Sky Blue */
   --color-btn-text: #000000;
+  --glow-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.5);
   
   --glass-bg: rgba(22, 37, 62, 0.7);
   --glass-border: rgba(255, 255, 255, 0.05);
@@ -212,3 +214,26 @@ h1, h2, h3, h4, h5, h6 {
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Whole Card Hover Glow */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: var(--glow-shadow);
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+}

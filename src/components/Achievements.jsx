@@ -50,7 +50,7 @@ const Achievements = () => {
           {achievements.map((item, index) => (
             <div 
               key={index} 
-              className={`achievement-card glass-panel animate-fade-in delay-${(index + 1) * 100}`}
+              className={`achievement-card glass-panel hover-glow animate-fade-in delay-${(index + 1) * 100}`}
             >
               <div className="achievement-icon-wrapper">
                 {item.icon}

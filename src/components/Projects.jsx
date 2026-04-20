@@ -1,6 +1,43 @@
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Projects.css';
 
+const ProjectCard = ({ project, index }) => {
+  return (
+    <div 
+      className={`project-card glass-panel hover-glow animate-fade-in delay-${(index % 3 + 1) * 100}`}
+    >
+      <div className="project-header">
+        <div className="folder-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" width="40" height="40">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+      </div>
+      
+      <h3 className="project-title">
+        {project.title}
+      </h3>
+      
+      <div className="project-date" style={{ fontFamily: 'monospace', fontSize: '0.85rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>
+        {project.date}
+      </div>
+      
+      <div className="project-description">
+        <p>{project.description}</p>
+      </div>
+      
+      <ul className="project-tech-list">
+        {project.tags.map((tag, i) => (
+          <li key={i}>{tag}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
 const Projects = () => {
+  const revealRef = useScrollReveal();
+  
   const projects = [
     {
       title: 'EV Feeder Service System for Hyderabad',
@@ -69,42 +106,13 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section reveal" ref={revealRef}>
       <div className="container">
-        <h2 className="heading-lg section-title animate-fade-in">Academic & Personal Projects</h2>
+        <h2 className="heading-lg section-title">Academic & Personal Projects</h2>
         
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className={`project-card glass-panel animate-fade-in delay-${(index % 3 + 1) * 100}`}
-            >
-              <div className="project-header">
-                <div className="folder-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" width="40" height="40">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                </div>
-              </div>
-              
-              <h3 className="project-title">
-                {project.title}
-              </h3>
-              
-              <div className="project-date" style={{ fontFamily: 'monospace', fontSize: '0.85rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>
-                {project.date}
-              </div>
-              
-              <div className="project-description">
-                <p>{project.description}</p>
-              </div>
-              
-              <ul className="project-tech-list">
-                {project.tags.map((tag, i) => (
-                  <li key={i}>{tag}</li>
-                ))}
-              </ul>
-            </div>
+            <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
       </div>
