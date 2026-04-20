@@ -22,7 +22,7 @@ function App() {
   }, [mode]);
 
   return (
-    <div className="app">
+    <div className="min-h-screen">
       <Navbar />
       <ThemeSwitcher mode={mode} setMode={setMode} />
       <main>
