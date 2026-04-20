@@ -1,7 +1,7 @@
 :root {
   /* Typography */
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  
+
   /* Spacing & Layout */
   --max-width: 1200px;
   --nav-height: 80px;
@@ -14,17 +14,21 @@
 
 /* --- LIGHT MODE --- */
 [data-mode="light"] {
-  --color-bg: #f0f4f8; /* Soft Ice Blue / Slate */
+  --color-bg: #f0f4f8;
+  /* Soft Ice Blue / Slate */
   --color-surface: #ffffff;
-  --color-text: #102a43; /* Deep Blue-Gray */
+  --color-text: #102a43;
+  /* Deep Blue-Gray */
   --color-text-muted: #334e68;
   --color-border: #d9e2ec;
-  --color-primary: #1864ab; /* Ocean Blue */
-  --color-primary-hover: #1971c2;
-  --color-accent: #0ea5e9; /* Sky Blue */
+  --color-primary: #1864ab;
+  /* Ocean Blue */
+  -- color-primary-hover: #1971c2;
+  --color-accent: #0ea5e9;
+  /* Sky Blue */
   --color-btn-text: #ffffff;
   --glow-shadow: 0 10px 40px -10px rgba(24, 100, 171, 0.5);
-  
+
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(255, 255, 255, 0.5);
   --glass-shadow: 0 4px 30px rgba(16, 42, 67, 0.05);
@@ -32,17 +36,20 @@
 
 /* --- DARK MODE --- */
 [data-mode="dark"] {
-  --color-bg: #0b1426; /* Deep Navy */
+  --color-bg: #0b1426;
+  /* Deep Navy */
   --color-surface: #16253e;
   --color-text: #f0f4f8;
   --color-text-muted: #9fb3c8;
   --color-border: #243b53;
-  --color-primary: #3b82f6; /* Bright Blue */
+  --color-primary: #3b82f6;
+  /* Bright Blue */
   --color-primary-hover: #60a5fa;
-  --color-accent: #38bdf8; /* Light Sky Blue */
+  --color-accent: #38bdf8;
+  /* Light Sky Blue */
   --color-btn-text: #000000;
   --glow-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.5);
-  
+
   --glass-bg: rgba(22, 37, 62, 0.7);
   --glass-border: rgba(255, 255, 255, 0.05);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
@@ -97,7 +104,12 @@ img {
 }
 
 /* Typography Utilities */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
   font-weight: 700;
   color: var(--color-text);
@@ -201,8 +213,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
@@ -210,10 +229,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Base utility for staggered animations */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
 
 /* Scroll Reveal */
 .reveal {
